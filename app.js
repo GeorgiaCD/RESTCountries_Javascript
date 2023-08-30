@@ -44,11 +44,30 @@ const filterCountry = (country) =>{
     // reassign countries variable
     // call populate list again 
     const form = document.querySelector("form");
-    
+    const filterValue = input.value.toLowerCase();
+    const filteredCountry = countries.filter()
+
 
     
 }
 
+enter.addEventListener("click",(newCountry)=>{
+    filterCountry(newCountry);
+})
+
+
+// enter.addEventListener("click",(newCountry)=>{
+//     createAndAppendListItem(newCountry);
+// })
+
+
+
+
+const createAndAppendListItem = (content) => {
+    const filterCountry = document.createElement("li");
+    filterCountry.innerText = input.value;
+    filterList.appendChild(filterCountry);
+}
 
 
 
