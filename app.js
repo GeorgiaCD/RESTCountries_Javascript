@@ -43,7 +43,7 @@ const filterCountry = (country) =>{
     // call a filter function (substring in string:the country name)
     // reassign countries variable
     // call populate list again 
-    const form = document.querySelector("form");
+    // const form = document.querySelector("form");
     const filterValue = input.value.toLowerCase();
     const filteredCountries = countries.filter(countryData =>{
         const countryName = countryData.name.common.toLowerCase();
