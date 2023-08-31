@@ -45,11 +45,20 @@ const filterCountry = (country) =>{
     // call populate list again 
     const form = document.querySelector("form");
     const filterValue = input.value.toLowerCase();
-    const filteredCountry = countries.filter()
+    const filteredCountries = countries.filter(countryData =>{
+        const countryName = countryData.name.common.toLowerCase();
+        return countryName.includes(filterValue);
+    })
+
+    countries = filterCountries;
+
+    populateList();
 
 
     
 }
+
+input.addEventListener("input",filterCountry);
 
 enter.addEventListener("click",(newCountry)=>{
     filterCountry(newCountry);
@@ -63,11 +72,11 @@ enter.addEventListener("click",(newCountry)=>{
 
 
 
-const createAndAppendListItem = (content) => {
-    const filterCountry = document.createElement("li");
-    filterCountry.innerText = input.value;
-    filterList.appendChild(filterCountry);
-}
+// const createAndAppendListItem = (content) => {
+//     const filterCountry = document.createElement("li");
+//     filterCountry.innerText = input.value;
+//     filterList.appendChild(filterCountry);
+// }
 
 
 
